@@ -1,21 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
 body {
-    overflow-x: hidden;
+    overflow-x: auto;
     font-family: 'Lato', sans-serif;
-    color: #505962
+    color: #505962;
+    background: black;
 }
 
 /*Navbar -----------------*/
 .navbar {
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 900;
     font-size: .9rem;
     letter-spacing: .1rem;
     background: rgb(0,0,0,.4) !important;
 }
 .navbar-dark .navbar-nav .nav-link{
-    color: white;
+    color: whitesmoke;
     padding-top: .8rem;
 }
 .navbar-dark .navbar-nav .nav-link.active,
@@ -39,6 +40,92 @@ body {
 .carousel-item {
     height: 100vh;
 }
+
+.carousel-caption {
+  text-transform: uppercase;
+}
+
+/* ================= about me section ============== */
+.new-section{
+  margin-top: 200px;
+  margin-bottom: 20px;
+
+}
+
+.aboutme {
+  position: absolute;
+    top: -80px;
+    left: -50px;
+    right: 0;
+    bottom: 0;
+  text-transform: uppercase !important;
+  color:  white !important;
+  letter-spacing: .9rem;
+  font-weight: 900 !important;
+
+
+}
+.bold-text {
+  position: absolute;
+  top: -80px;
+  left: -50px;
+  right: 0;
+  bottom: 0;
+  font-weight: 700 !important;
+  color: rgb(43, 41, 41);
+  text-transform: uppercase; 
+  font-size: 150px;
+  
+}
+.p-5 {
+  position: relative;
+  z-index: 1;
+  
+
+  padding: 3rem !important;
+ 
+ }
+ .mb-5 {
+   margin-bottom: 3rem !important; 
+   z-index: -1;
+   position: relative;
+   top: -30px;
+   left: -50px;
+   font-size: 30px;
+  }
+ 
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  line-height: 1.5;
+  font-weight: 400; 
+  letter-spacing: .4rem;
+  padding: absolute ;
+    top: -150px;
+    left: 20px;
+    right: 0;
+    bottom: 0;
+  
+}
+p {
+  letter-spacing: .1rem !important;
+  text-transform: initial ;
+  color: rgb(184, 176, 176);
+  font-size: 20px !important;
+  text-align: justify;
+}
+.p-5{
+  padding: 3rem !important; 
+
+}
+.icons {
+  margin-top: 6rem;
+  color: azure;
+}
+
+.link { color: rgb(184, 176, 176); } /* CSS link color (red) */
+.link:hover { color: #1ebba3; 
+text-decoration: none;
+} /* CSS link hover (green) */
 /*============= COURSE SECTION =============*/
 
 .narrow {

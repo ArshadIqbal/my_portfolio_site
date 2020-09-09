@@ -2,6 +2,7 @@
 {% load static %}
 {% block index %}
 <!-- Start image slider------------------------->
+
     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
       <ol class="carousel-indicators">
         {% for slider in sliders %}
@@ -13,16 +14,14 @@
         {% endfor %}
       </ol>
       <div class="carousel-inner" role="listbox">
-            <!--Slide 1          -->
         {% for slider in sliders %}
-
           {% if slider.id == 1%}
             <div class="carousel-item active">
               <img class="d-block w-100" src="{{slider.slider_image.url}}" alt="{{slider.title_bold}}">
               <div class="carousel-caption text-center">
                 <h5>{{slider.greetings}}</h5>
                 <h1>{{slider.title_bold}}</h1>
-                <a class="btn btn-outline-light btn-lg" href="#myresume">Resume</a>
+                <a class="btn btn-outline-light btn-lg" href="#myresume">My Resume</a>
                 <a class="btn btn-outline-light btn-lg" href="#portfolio">View Portfolio</a>
              </div>
             </div>
@@ -32,7 +31,7 @@
               <div class="carousel-caption text-center">
                 <h5>{{slider.greetings}}</h5>
                 <h1>{{slider.title_bold}}</h1>
-                <a class="btn btn-outline-light btn-lg" href="#myresume">Resume</a>
+                <a class="btn btn-outline-light btn-lg" href="#myresume">My Resume</a>
                 <a class="btn btn-outline-light btn-lg" href="#portfolio">Portfolio</a>
               </div>
             </div>
@@ -41,7 +40,46 @@
           <!-- End of Inner Carousel ------->
         </div>
     </div>
-  <div>
-  </div>
+  
+  <section id="aboutme" class="new-section"> 
+     <div class="container">
+       <div class="row">
+         <div class="col-md-4">
+          <img class="d-block w-100 rounded-circle" src="{% static  'portfolio\Author_1.jpg' %}" alt="Author">
+         </div>
+         <div class="col-md-2"></div>
+          <div class="col-md-6">
+            <div class="aboutme" >
+              <h1 class="bold-text"> ABOUT</h1> 
+              <div class="p-5" >
+                <h2 class="mb-5">Hi! I'm Arshad Iqbal</h2> 
+                <p>
+                  I am a full time software engineer, certified Project Manager and Scrum Master.
+                   I have over 7 years of experience in porgramming web applications.
+                   I am a Database Designer as well developer for online solutions such as e-commerce and much more. 
+                </p> 
+                <div class="icons">
+                  <h5> contact me here!</h5>
+                  <p>
+                    <i class="fas fa-envelope"></i>
+                    
+                    <a class="link" href="mailto:ichm.arshad@gmail.com?subject=I would like to get my project done!">ichm.arshad@gmail.com</a>
+                  </p>
+                  <p >
+                    <i class="fas fa-phone"></i>
+                    <a class="link" href="{% url 'index' %}#aboutme">+43 (0) 699 1127 8003</a>
+                  </p>
+                  <p>
+                    <i class="fab fa-linkedin-in"></i>
+                    </i>
+                    <a class="link" href="https://www.linkedin.com/in/arshad-iqbal-/" target="_blank">visit me on Linkedin</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+       </div>
+     </div>
+  </section>
 <!-- End image slider------------------------->
 {% endblock %}
