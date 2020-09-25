@@ -2,8 +2,7 @@
 {% load static %}
 {% block index %}
 <!-- Start image slider------------------------->
-
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade " data-ride="carousel" data-interval="4000">
       <ol class="carousel-indicators">
         {% for slider in sliders %}
         {% if slider.id == 1 %}
@@ -16,13 +15,13 @@
       <div class="carousel-inner" role="listbox">
         {% for slider in sliders %}
           {% if slider.id == 1%}
-            <div class="carousel-item active">
+            <div class="carousel-item active" style="background-image: ;">
               <img class="d-block w-100" src="{{slider.slider_image.url}}" alt="{{slider.title_bold}}">
               <div class="carousel-caption text-center">
                 <h5>{{slider.greetings}}</h5>
                 <h1>{{slider.title_bold}}</h1>
-                <a class="btn btn-outline-light btn-lg" href="#myresume">My Resume</a>
-                <a class="btn btn-outline-light btn-lg" href="#portfolio">View Portfolio</a>
+                <!-- <a class="btn btn-outline-light btn-lg" href="#myresume">View Resume</a> -->
+                <!-- <a class="btn btn-outline-light btn-lg" href="#portfolio">View Portfolio</a> -->
              </div>
             </div>
           {% else %}
@@ -31,8 +30,8 @@
               <div class="carousel-caption text-center">
                 <h5>{{slider.greetings}}</h5>
                 <h1>{{slider.title_bold}}</h1>
-                <a class="btn btn-outline-light btn-lg" href="#myresume">My Resume</a>
-                <a class="btn btn-outline-light btn-lg" href="#portfolio">Portfolio</a>
+                <!-- <a class="btn btn-outline-light btn-lg" href="#myresume">View Resume</a> -->
+                <!-- <a class="btn btn-outline-light btn-lg" href="#portfolio">View Portfolio</a> -->
               </div>
             </div>
           {% endif %}
@@ -40,46 +39,420 @@
           <!-- End of Inner Carousel ------->
         </div>
     </div>
-  
-  <section id="aboutme" class="new-section"> 
-     <div class="container">
-       <div class="row">
-         <div class="col-md-4">
-          <img class="d-block w-100 rounded-circle" src="{% static  'portfolio\Author_1.jpg' %}" alt="Author">
+
+    <!-- ========================================================End of Slider====================================================================== -->
+
+    <!-- =================================================About me SEction========================================================================= -->
+  <section id="aboutme" class="offset"> 
+     <div class="jumbotron  text-center">
+      <div class="section-heading  text-center">
+        <h1>ABOUT</h1>
+        <div class="heading-underline"></div>
+      </div>
+       <div class="row align-items-center">
+        <div class="col-md-2"></div>
+         <div class="col-md-4 mb-5">
+          <img class="img-circle " src="{% static  'index\Author_2.jpg' %}" alt="Author">
          </div>
-         <div class="col-md-2"></div>
-          <div class="col-md-6">
-            <div class="aboutme" >
-              <h1 class="bold-text"> ABOUT</h1> 
-              <div class="p-5" >
+         <div class="col-md-1"></div>
+          <div class="col-md-3">
                 <h2 class="mb-5">Hi! I'm Arshad Iqbal</h2> 
-                <p>
-                  I am a full time software engineer, certified Project Manager and Scrum Master.
-                   I have over 7 years of experience in porgramming web applications.
-                   I am a Database Designer as well developer for online solutions such as e-commerce and much more. 
+                <p class="text-justify">
+                  I am a full time software engineer, certified Project Manager and Scrum Master,
+                   having many years of  experience in porgramming web applications.
+                   I am a Database Designer as well as developer for online solutions such as e-commerce and much more. 
                 </p> 
-                <div class="icons">
-                  <h5> contact me here!</h5>
-                  <p>
-                    <i class="fas fa-envelope"></i>
-                    
-                    <a class="link" href="mailto:ichm.arshad@gmail.com?subject=I would like to get my project done!">ichm.arshad@gmail.com</a>
-                  </p>
-                  <p >
-                    <i class="fas fa-phone"></i>
-                    <a class="link" href="{% url 'index' %}#aboutme">+43 (0) 699 1127 8003</a>
-                  </p>
-                  <p>
-                    <i class="fab fa-linkedin-in"></i>
-                    </i>
-                    <a class="link" href="https://www.linkedin.com/in/arshad-iqbal-/" target="_blank">visit me on Linkedin</a>
-                  </p>
-                </div>
-              </div>
+                <a class="btn btn-outline-light btn-lg  mt-5" href="{% url 'index' %}#contact">Contact Me</a>
             </div>
             
        </div>
      </div>
   </section>
-<!-- End image slider------------------------->
+
+  <!-- ==================================================RESUME Section======================================================================== -->
+
+<!--Accordion wrapper-->
+<section id="resume" class="offset">
+<div class="container">
+  <div class="section-heading mt-5 text-center">
+    <h1>My Resume</h1>
+    <div class="heading-underline"></div>
+  </div>
+<div id="accordion">
+  <div class="row ">
+    <div class="col-md-6">
+      <div class="card ">
+        <div class="card-header" id="Education">
+        
+          <a class="image-responvive center-block"  data-toggle="collapse" data-parent="#accordion" href="#collapseEducation" aria-expanded="false"
+          aria-controls="collapseEducation">
+          <img class="card-img-top" src="{% static  'index\images\education-card.jpg' %}" alt="">  
+         
+        </a>
+       
+        </div>
+        <div id="collapseEducation" class="collapse" aria-labelledby="Education" data-parent="#accordion">
+          <div class="card-body">
+            <div class="table-responsive mx-3">
+              <!--Table-->
+              <table class="table table-hover ">
+                <!--Table head-->
+                <thead >
+                  <tr>
+                    <th class="th-sm"><a>From</th>
+                    <th class="th-sm"><a>To</a></th>
+                    <th class="th-lg"><a>Title and Degree</a></th>
+                    <th class="th-sm">Institution</th>
+                    <th class="th-sm">Location</th>
+                  </tr>
+                </thead>
+                {% for entry in entries_edu %} 
+                <tbody>
+                  <tr>
+                    <td>{{ entry.from_year.year}}</td>
+                    {% if entry.is_current%}
+                    <td>Present</td>
+                    {% else %}
+                    <td>{{ entry.to_year.year}}</td>
+                    {% endif %}
+                    <td>{{ entry.title}} - {{ entry.description}} </td>
+                    <td>
+                      <a href="{{entry.institution_url}}" target="_blank">
+                        {{entry.institution}}
+                    </a>
+                    </td>
+                    <td>
+                      {{ entry.city}} ,  {{ entry.country}}
+                    </td>
+                  </tr>             
+                </tbody>
+                {% endfor %}
+              </table>
+              <!--Table-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 ">
+      <div class="card">
+        <div class="card-header" id="Experience">
+          
+            <a class="image-responvive center-block"  data-toggle="collapse" data-parent="#accordion" href="#collapseExperience" aria-expanded="false"
+          aria-controls="collapseExperience">
+          <img class="card-img-top" src="{% static  'index\images\experience-card.jpg' %}" alt="">
+         
+        </a>
+        </div>
+        <div id="collapseExperience" class="collapse" aria-labelledby="Experience" data-parent="#accordion">
+          <div class="card-body">
+            <div class="table-responsive mx-3">
+              <!--Table-->
+              <table class="table table-hover mb-0">
+                <!--Table head-->
+                <thead>
+                  <tr>
+                    <th class="th-sm"><a>From</th>
+                    <th class="th-sm"><a>To</a></th>
+                    <th class="th-lg"><a>Title and Description</a></th>
+                    <th class="th-sm">Company</th>
+                    <th class="th-sm">Location</th>
+                  </tr>
+                </thead>
+                {% for entry in entries_exp %} 
+                <tbody>
+                  <tr>
+                    <td>{{ entry.from_year.year}}</td>
+                    {% if entry.is_current%}
+                    <td>Present</td>
+                    {% else %}
+                    <td>{{ entry.to_year.year}}</td>
+                    {% endif %}
+                    <td>{{ entry.title}} - {{ entry.description}} </td>
+                    <td>
+                      <a href="{{entry.company_url}}" target="_blank">
+                        {{entry.company}}
+                    </a>
+                    </td>
+                    <td>
+                      {{ entry.city}} ,  {{ entry.country}}
+                    </td>
+                  </tr>             
+                </tbody>
+                {% endfor %}
+              </table>
+              <!--Table-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row no-padding">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header" id="Certificates">
+          
+            <a  class="image-responvive center-block" data-toggle="collapse" data-parent="#accordion" href="#collapseCertificates" aria-expanded="false"
+          aria-controls="collapseExperience">
+          <img class="card-img-top" src="{% static  'index\images\certifications.jpg' %}" alt="">
+         
+        </a>
+          
+        </div>
+        <div id="collapseCertificates" class="collapse" aria-labelledby="Certificates" data-parent="#accordion">
+          <div class="card-body">
+            <div class="table-responsive mx-3">
+              <!--Table-->
+              <table class="table table-hover mb-0">
+                <!--Table head-->
+                <thead>
+                  <tr>
+                    <th class="th-sm align-left"><a>Year</th>
+                    <th class="th-lg align-left"><a>Title </a></th>
+                    <th class="th-sm align-left">Company</th>
+                    <th class="th-sm align-left">Location</th>
+                  </tr>
+                </thead>
+                {% for entry in entries_cert %} 
+                <tbody>
+                  <tr>
+                    <td class="align-left">{{ entry.from_year.year}}</td>
+                    <td class="align-left">{{ entry.title}} - {{ entry.description}} </td>
+                    <td>
+                      <a href="{{entry.institution_url}}" target="_blank">
+                        {{entry.institution}}
+                    </a>
+                    </td>
+                    <td class="align-left">
+                      {{ entry.city}} ,  {{ entry.country}}
+                    </td>
+                  </tr>             
+                </tbody>
+                {% endfor %}
+              </table>
+              <!--Table-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">      
+      <div class="card">
+      <div class="card-header" id="Languages">
+        <a type="image-responvive center-block" data-toggle="collapse" data-parent="#accordion" href="#collapseLanguages" aria-expanded="false"
+          aria-controls="collapseExperience">
+          <img class="card-img-top" src="{% static  'index\images\language-card.jpg' %}" alt="">
+          
+        </a>
+      </div>
+     
+      <div id="collapseLanguages" class="collapse" aria-labelledby="Languages" data-parent="#accordion">
+        <div class="card-body">
+          <div class="row no-padding">
+            {% for entry in entries_lang %} 
+             <div class="col-sm-3">
+                {{entry.name}}
+                <img src="{{entry.lang_flag.url}}" alt="{{entry.name}}"> 
+             </div>
+           {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+  <div class="narrow text-center">
+    <div class="col-12">
+      <p class="lead">
+        Get in touch with me by clicking the following button.
+      </p>
+      <a class="btn btn-outline-light btn-lg" href="{% url 'index' %}#contact">Contact Me</a>
+    </div>
+
+  </div>
+</div>
+</section>
+<!-- ============================================================================================================================== -->
+
+  <!-- ============Portfolio Section ============================= -->
+  <section id="portfolio" class="offset mt-5 mb-5">
+    <div class="  jumbotron container mt-5 text-justify">
+      <div class="section-heading mt-5 text-center">
+        <h2>Portfolio</h2>
+        <div class="heading-underline"></div>
+      </div>
+      <div class=" row  justify-content-md-center ">
+      {%for project in projects %}
+      <div class="project col-md-4 mr-5 ml-5  mt-5 mb-5 ">
+        {% if project.url %}
+          <a href="{{project.url}}" target="_blank">
+            <img src="{{project.image.url}}" alt="{{project.title}}" class="width">
+          </a>
+          {% else %}
+          
+          <h3 class="heading text-center ">{{project.title}}</h3>
+          {% endif %}
+          <h3 class="heading">{{project.title}}</h3>
+          {{project.description}}
+          <div >
+            <a href="{{project.url}}" class="btn btn-outline-light btn-lg" target="_blank">Visit website</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="narrow text-center">
+      <div class="col-12">
+        <p class="lead">
+          Want to get your project done?
+        </p>
+        <a class="btn btn-outline-light btn-lg" href="{% url 'index' %}#contact">Get a free consultation</a>
+      </div>
+    </div>
+  </div>
+  </section>
+ 
+  <!-- ================Services Section============================================================== -->
+  <section id="services" class="offset">
+    <div class=" container mt-5 mb-5">
+      <div class="section-heading mt-5 text-center">
+        <h2>what i do?</h2>
+        <div class="heading-underline"></div>
+      </div>
+      <div class="row"> 
+        {% for service in services %}
+        <div class=" col-md-5 col-sm-12 col-xs-12 Services-tab  item ml-5">
+          <div class="folded-corner service_tab_1">
+            <div class="text">
+              <i class="{{service.fa_url}} fa-5x fa-icon-image"></i>
+                <p class="item-title">
+                    <h3> {{service.title}}</h3>
+                  </p><!-- /.item-title -->
+            </div>
+          </div>
+          </div>
+        {% endfor %}
+    </div>
+    </div>
+  </section>
+  <!-- ==============contact me Form -->
+
+  <!-- ======================================================= -->
+  <section id="contact" class="section offset">
+<div class="jumbotron container ">
+    <!--Section heading-->
+    <div class="section-heading mt-3 text-center">
+      <h2>contact me</h2>
+      <div class="heading-underline"></div>
+    </div>
+    {% if form_name %}
+    <div>
+      <h3>
+        Thanks for contacting me {{form_name}} !
+      </h3>
+      <p class="center">
+        Your message will be responded within next 48 Hours.
+      </p>
+    </div>
+    {% else %}
+    <div class="row pr-4">
+  
+      <!--Grid column-->
+      <div class="col-lg-5 ">
+  
+        <!--Form with header-->
+        <form  id="contactForm" action="{% url 'contact' %}" method="POST" class='needs-validation' >
+          {% csrf_token %}
+        <div class="card">
+  
+          <div class="card-body">
+            <!--Header-->
+            
+            <!--Body-->
+            <div class="md-form mb-3">
+              
+              <input type="text" name="form-name" class="form-control " required placeholder="Your name">
+            </div>
+  
+            <div class="md-form mb-3">
+              
+              <input  type="email" name="form-email" class="form-control " required placeholder="Your E-mail">
+              
+            </div>
+  
+            <div class="md-form mb-3">
+              
+              <input type="text" name="form-Subject" class="form-control " required placeholder="What would you like to write about?">
+              
+            </div>
+  
+            <div class="md-form mb-3">
+              
+              <textarea name="form-text" class="form-control md-textarea " rows="8" required placeholder="Your message here"></textarea>
+              
+            </div>
+  
+            <div class="text-center mt-4">
+              <button type = "submit" class="btn btn-outline-light btn-lg btn-block">send message</button>
+            </div>
+  
+          </div>
+  
+        </div>
+      </form>
+        <!--Form with header-->
+  
+      </div>
+      <!--Grid column-->
+  
+      <!--Grid column-->
+      <div class="col-lg-7">
+  
+        <!--Google map-->
+        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50570.449889969925!2d16.401644208882647!3d48.23007456277377!
+                        2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0130495925e7%3A0x79feca80d0e4553f!2sMiriam-Makeba-Gasse%2C%201220%20Wien
+                        !5e0!3m2!1sen!2sat!4v1600328769926!5m2!1sen!2sat" 
+                       width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
+        </div>
+  
+        <br>
+        <!--Buttons-->
+        <div class="row text-center pr-4">
+          <div class="col-md-5">
+            <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+            <p>1220, Vienna</p>
+            <p>Austria</p>
+          </div>
+  
+          <div class="col-md-4">
+            <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+            <p>+ 43(0) 699 1127 8003</p>
+            <a class="link" href="https://www.linkedin.com/in/arshad-iqbal-/" target="_blank"><i class="fab fa-linkedin-in"></i> </a>
+          </div>
+  
+          <div class="col-md-3">
+            <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+            <p>admin@arshadiqbal.com</p>
+            <a class="link" href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter-square"></i> </a>
+        
+          </div>
+        </div>
+  
+      </div>
+      <!--Grid column-->
+  
+    </div>
+   {% endif %}
+  </div>
+  <hr class="socket">
+  <span class="copyright-center pl-5">&copy;Arshad Iqbal 2020</span>
+ 
+  </section>
+  <!-- ======================================================== -->
 {% endblock %}
