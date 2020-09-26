@@ -51,18 +51,18 @@
       </div>
        <div class="row align-items-center">
         <div class="col-md-2"></div>
-         <div class="col-md-4 mb-5">
-          <img class="img-circle " src="{% static  'index\Author_2.jpg' %}" alt="Author">
+         <div class="col-md-4 col-xs-12 mb-5">
+          <img class="img-fluid" src="{% static  'index\Author_2.jpg' %}" alt="Author">
          </div>
          <div class="col-md-1"></div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-xs-12">
                 <h2 class="mb-5">Hi! I'm Arshad Iqbal</h2> 
-                <p class="text-justify">
+                <p class="text-justify mr-3 ml-3">
                   I am a full time software engineer, certified Project Manager and Scrum Master,
                    having many years of  experience in porgramming web applications.
                    I am a Database Designer as well as developer for online solutions such as e-commerce and much more. 
                 </p> 
-                <a class="btn btn-outline-light btn-lg  mt-5" href="{% url 'index' %}#contact">Contact Me</a>
+                <a class="btn btn-outline-light btn-lg  mt-5 mb-5" href="{% url 'index' %}#contact">Contact Me</a>
             </div>
             
        </div>
@@ -325,7 +325,7 @@
       </div>
       <div class="row"> 
         {% for service in services %}
-        <div class=" col-md-5 col-sm-12 col-xs-12 Services-tab  item ml-5">
+        <div class=" col-md-5 col-sm-12 col-xs-12 Services-tab  item ">
           <div class="folded-corner service_tab_1">
             <div class="text">
               <i class="{{service.fa_url}} fa-5x fa-icon-image"></i>
@@ -362,14 +362,14 @@
     <div class="row pr-4">
   
       <!--Grid column-->
-      <div class="col-lg-5 ">
+      <div class="col-lg-5 col-xs-12 ml-3 ">
   
         <!--Form with header-->
         <form  id="contactForm" action="{% url 'contact' %}" method="POST" class='needs-validation' >
           {% csrf_token %}
         <div class="card">
   
-          <div class="card-body">
+          <div class="card-body col-xs-12">
             <!--Header-->
             
             <!--Body-->
@@ -410,10 +410,10 @@
       <!--Grid column-->
   
       <!--Grid column-->
-      <div class="col-lg-7">
+      <div class="col-lg-7 col-xs-12 ml-4">
   
         <!--Google map-->
-        <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+        <div  id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50570.449889969925!2d16.401644208882647!3d48.23007456277377!
                         2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0130495925e7%3A0x79feca80d0e4553f!2sMiriam-Makeba-Gasse%2C%201220%20Wien
                         !5e0!3m2!1sen!2sat!4v1600328769926!5m2!1sen!2sat" 
