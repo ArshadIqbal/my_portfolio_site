@@ -26,9 +26,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2mc*5l&r!hv$=m@uzy6yq(c$t+c=7)ce3xbee&=ns_10l3t901'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['arshadiqbal.herokuapp.com']
 
 
 # Application definition
@@ -132,6 +132,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # E mail settings
 host_user = os.environ.get('EMAIL_HOST_USER')
 host_pwd = os.environ.get('EMAIL_HOST_PASSWORD')
@@ -146,3 +147,5 @@ EMAIL_HOST_PASSWORD = host_pwd
 # EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
+
+django_heroku.settings(locals())
