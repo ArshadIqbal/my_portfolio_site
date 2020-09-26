@@ -276,6 +276,7 @@ h5 {
 }
 .Services-tab {
   margin-top: 20px;
+  center: auto;
 }
 
 /*
@@ -301,6 +302,10 @@ h5 {
 */
 #services h3 {
   text-transform: uppercase !important;
+}
+
+#services.row {
+  margin-left: 7rem;
 }
 .folded-corner:before {
   content: "";
