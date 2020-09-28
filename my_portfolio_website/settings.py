@@ -26,9 +26,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2mc*5l&r!hv$=m@uzy6yq(c$t+c=7)ce3xbee&=ns_10l3t901'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'False'
 
-ALLOWED_HOSTS = ['arshadiqbal.herokuapp.com']
+ALLOWED_HOSTS = ['https://arshadiqbal.herokuapp.com/']
 
 
 # Application definition
@@ -125,14 +125,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = (
     BASE_DIR
 )
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 # E mail settings
 host_user = os.environ.get('EMAIL_HOST_USER')
 host_pwd = os.environ.get('EMAIL_HOST_PASSWORD')
