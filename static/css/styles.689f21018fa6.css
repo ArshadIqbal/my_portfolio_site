@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
+span {
+  color: whitesmoke;
+}
+textarea {
+  width: 300px;
+  height: 150px;
+}
+i {
+  color: orangered !important;
+  size: 500px;
+}
+body {
+  overflow-x: hidden;
+
+  font-family: "Lato", sans-serif;
+  color: whitesmoke;
+  background-color: black;
+  background: #000000 !important;
+}
+hr.socket {
+  border-top: 0.2rem solid orangered;
+  width: 100%;
+  text: center;
+}
+h1,
+h2,
+h3,
+h4,
+h6,
+h5 {
+  color: whitesmoke;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.offset:before {
+  height: 4rem;
+  margin-top: -4rem;
+  content: "";
+  display: block;
+}
+
+/* ===================== Navbar =============*/
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  background: rgb(0, 0, 0, 0.7) !important;
+}
+
+.navbar-brand img {
+  height: 4rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: orangered;
+  padding-top: 0.8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: whitesmoke;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.navbar-nav li {
+  padding: 0.7rem;
+}
+.navbar-nav li a {
+  font-weight: 200;
+  float: right;
+}
+/*-----------Toggele Button----------------*/
+.navbar-toggler {
+  outline: none !important;
+}
+
+/*======================Slider Item===============================*/
+.carousel-item {
+  height: 100vh;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  text-transform: uppercase;
+  color: whitesmoke;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+.carousel-caption h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-shadow: 0.1rem 0.1rem 0.3rem black;
+  padding-bottom: 1.6rem;
+  color: whitesmoke;
+}
+.carousel-caption h5 {
+  font-size: 2rem;
+  color: whitesmoke;
+  text-shadow: 0.1rem 0.1rem 0.3rem black;
+  padding-bottom: 1.6rem;
+}
+.carousel-indicators {
+  position: absolute;
+  top: 80%;
+}
+.btn3d {
+  transition: all 0.08s linear;
+  position: relative;
+  outline: medium none;
+  -moz-outline-style: none;
+  border: 0px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.btn3d:focus {
+  outline: medium none;
+  -moz-outline-style: none;
+}
+.btn3d:active {
+  top: 9px;
+}
+.btn-lg {
+  border-width: medium;
+  border-radius: 0;
+  font-size: 1.1rem;
+  border-color: orangered;
+  color: whitesmoke;
+  background-color: orangered;
+  text-transform: uppercase;
+  opacity: 100%;
+}
+.btn-lg:hover {
+  background-color: orangered;
+  border-color: orangered;
+  color: whitesmoke;
+  opacity: 100%;
+}
+
+.card-img-top h1 {
+  text-transform: uppercase;
+  color: orangered !important;
+}
+/* ================ Accordion card styling=============== */
+/*  ================ END Accordion card styling===============*/
+/* ==========================  jumbotron=================================================== */
+.jumbotron {
+  border-radius: 0;
+  background-color: #111111 !important;
+  padding: 3rem 0 2rem;
+}
+/* ================= about me section ============== */
+
+.icons {
+  margin-top: 6rem;
+  color: azure;
+}
+.link {
+  color: whitesmoke;
+  text-decoration: none;
+} /* CSS link color (red) */
+.link:hover {
+  color: orangered;
+  text-decoration: none;
+} /* CSS link hover (green) */
+/*============= COURSE SECTION =============*/
+
+.narrow {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+.btn-md {
+  border-width: medium;
+  border-radius: 0rem;
+  padding: 0.6rem 0.61rem;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+.card-header {
+  padding: 0rem;
+  margin: 0rem;
+}
+#resume {
+  background-color: black;
+  text-transform: uppercase;
+}
+.card-header.img {
+  max-width: 100%;
+  transition: transform 0.5 ease;
+}
+.card-heade.img:hover {
+  transform: scale(1.1);
+  cursor: zoom-in;
+}
+.card-img-overlay {
+  color: orangered !important;
+  position: absolute;
+  top: 20%;
+}
+.card {
+  margin: 0.5rem;
+}
+.btn- {
+  position: absolute;
+  top: 20rem;
+
+  padding: 0rem;
+}
+.btn-outline-primary,
+.btn-block {
+  border-width: none !important;
+  box-shadow: none !important;
+  border-color: orangered;
+  background-color: orangered;
+  text-transform: uppercase;
+}
+.btn-secondary {
+  border-width: medium;
+  border-radius: 0;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 1rem;
+  border-color: orangered;
+  background-color: orangered;
+  color: whitesmoke;
+}
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  border-color: orangered !important;
+  background-color: orangered !important;
+  color: white !important;
+}
+
+.btn-outline-primary {
+  border: none;
+  color: white !important;
+}
+.portfolio-card {
+  margin: 0.3rem;
+}
+.project img {
+  width: 100%;
+  height: 30%;
+}
+/* =================footer============================ */
+.bottom {
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.socket {
+  background-color: orangered;
+  color: orangered;
+}
+
+/* sevices section-------------------- */
+
+.text {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.folded-corner:hover .text {
+  visibility: visible;
+  color: whitesmoke;
+}
+.Services-tab {
+  margin-top: 20px;
+  center: auto;
+}
+
+/*
+  nav link items
+*/
+.folded-corner {
+  padding: 25px 25px;
+  position: relative;
+  font-size: 90%;
+  text-decoration: none;
+  color: #999;
+  background: transparent;
+  transition: all ease 0.5s;
+  border: 1px solid orangered;
+}
+.folded-corner:hover {
+  background-color: orangered;
+  color: whitesmoke !important;
+}
+
+/*
+  paper fold corner
+*/
+#services h3 {
+  text-transform: uppercase !important;
+}
+
+#services.row {
+  margin-left: 7rem;
+}
+.folded-corner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0px 0px 0;
+  border-color: orangered;
+  transition: all ease 0.5s;
+}
+
+/*
+  on li hover make paper fold larger
+*/
+.folded-corner:hover:before {
+  background-color: #d00003;
+  border-width: 0 50px 50px 0;
+  border-color: #eee #000;
+}
+
+.service_tab_1 {
+  background-color: #000;
+}
+.service_tab_1:hover .fa-icon-image {
+  color: whitesmoke !important;
+  transform: rotate(360deg) scale(1.5);
+}
+
+.fa-icon-image {
+  color: orangered;
+  display: inline-block;
+  font-style: normal;
+  font-size: 2rem;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-size-adjust: none;
+  font-stretch: normal;
+  -moz-font-feature-settings: normal;
+  -moz-font-language-override: normal;
+  text-rendering: auto;
+  transition: all 0.65s linear 0s;
+  text-align: center;
+  transition: all 1s cubic-bezier(0.99, 0.82, 0.11, 1.41);
+}
+.fa-icon-image:hover {
+  color: whitesmoke !important;
+}
+/* contact me  */
+.section-heading {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 50px;
+}
+.section-heading h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  position: relative;
+  z-index: 1;
+  margin: 1rem;
+}
+.contact-form .form-control {
+  width: 100%;
+  height: 46px;
+  padding: 0 15px;
+  font-size: 13px;
+  font-style: italic;
+}
+.contact-form .form-control:focus {
+  box-shadow: none;
+  border-color: #00aeef;
+}
+.contact-form textarea.form-control {
+  height: 110px;
+  padding: 15px;
+}
+.section-heading .heading-underline {
+  width: 70px;
+  height: 4px;
+  background-color: orangered;
+}
+.section-heading.text-center .heading-underline {
+  margin: 0 auto;
+}
+.section-heading.white h2 {
+  color: #ffffff;
+}
+
+.map-container-6 {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.map-container-6 iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.card {
+  background-color: black !important;
+  border: orangered;
+}
+.copyright-center {
+  display: flex;
+  justify-content: center;
+}
+/* end contact me */
+
+/* end services section */
+/*  ============= Accordian sectin========================= */
+
+/* ==============Project Section================================ */
+
+/*  ============= end Accordian sectin========================= */
+/*============ BOOTSTRAP BREAK POINTS:
+
+/*-----------------  Media Queries----------------------------- */
+@media (max-width: 767px) {
+  .carousel-item {
+    height: 100vh;
+  }
+  .carousel-caption h1 {
+    font-size: 2.3rem;
+    letter-spacing: 0.15rem;
+    padding-bottom: 0.5rem;
+    color: whitesmoke;
+  }
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+  p.lead {
+    text-transform: lowercase !important;
+  }
+}
+/*  
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
