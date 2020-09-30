@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
 import dj_database_url
 from decouple import config
 
@@ -148,5 +147,3 @@ EMAIL_HOST_PASSWORD = host_pwd
 # EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
-
-django_heroku.settings(locals())
