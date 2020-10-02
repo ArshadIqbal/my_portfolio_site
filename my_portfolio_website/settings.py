@@ -27,7 +27,7 @@ SECRET_KEY = '2mc*5l&r!hv$=m@uzy6yq(c$t+c=7)ce3xbee&=ns_10l3t901'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'False'
 
-ALLOWED_HOSTS = ['http://arshadiqbal.pythonanywhere.com/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -137,7 +137,7 @@ COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 host_user = os.environ.get('EMAIL_HOST_USER')
 host_pwd = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'gator4202.hostgator.com'
+EMAIL_HOST = 'grace.solidhosting.pro'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = host_user
 EMAIL_HOST_PASSWORD = host_pwd
