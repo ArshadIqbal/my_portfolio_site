@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {'charset': 'utf8mb4'},
         'NAME': 'my_portfolio',
-        'USER': 'cnwgsdkz_root',
+        'USER': 'root',
         'PASSWORD': 'Cf66AfC9_',
         'HOST': 'localhost',
         'PORT': '3306',
