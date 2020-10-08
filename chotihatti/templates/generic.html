@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Choti Hatti</title>
+  <link rel="icon" href="{% static 'chotihatti/img/chotihatti_logo.png' %}" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'chotihatti/css/bootstrap.min.css'%}" />
+  <!-- animate CSS -->
+  <link rel="stylesheet" href="{% static 'chotihatti/css/animate.css' %}" />
+  <!-- owl carousel CSS -->
+  <link rel="stylesheet" href="{% static 'chotihatti/css/owl.carousel.min.css' %}" />
+  <!-- font awesome CSS -->
+  <link rel="stylesheet" href="{% static 'chotihatti/css/all.css' %}" />
+  <!-- flaticon CSS -->
+  <link rel="stylesheet" href="{% static 'chotihatti/css/flaticon.css' %}" />
+  <link rel="stylesheet" href="{% static 'chotihatti/css/themify-icons.css' %}" />
+  <!-- font awesome CSS -->
+  <link rel="stylesheet" href="{% static 'chotihatti/css/magnific-popup.css' %}" />
+  <!-- swiper CSS -->
+  <link rel="stylesheet" href="{% static 'chotihatti/css/slick.css' %}" />
+  <!-- style CSS -->
+  <link rel="stylesheet" href="{% static 'chotihatti/css/style.css' %}" />
+  <link rel="stylesheet"
+    href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css" />
+</head>
+
+<body data-spy="scroll">
+  <!--::header part start::-->
+  <header class="main_menu home_menu">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-11">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="{%  url 'chotihatti' %}">
+              <img src="{% static 'chotihatti/img/chotihatti_logo.png' %}" alt="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="menu_icon"><i class="fas fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{%  url 'chotihatti' %}">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Shop
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                    <a class="dropdown-item" href="{% url 'chotihatti' %}#category">
+                      Category</a>
+                    <a class="dropdown-item" href="{% url 'chotihatti' %}#new_arrival">New Arrivals</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                    <a class="dropdown-item" href="{% url 'chotihatti' %}#testimonial"> Testimonials </a>
+                    <a class="dropdown-item" href="tracking.html">tracking</a>
+                    <a class="dropdown-item" href="checkout.html">product checkout</a>
+                    <a class="dropdown-item" href="cart.html">shopping cart</a>
+                    <a class="dropdown-item" href="confirmation.html">confirmation</a>
+                    <a class="dropdown-item" href="elements.html">elements</a>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    blog
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                    <a class="dropdown-item" href="blog.html"> blog</a>
+                    <a class="dropdown-item" href="single-blog.html">Single blog</a>
+                  </div>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'chotihatti' %}#footer">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="hearer_icon d-flex">
+              <div class="form-inline my-2 my-lg-0">
+                <a href="#" class="btn btn-warning">Login</a>
+
+                <a href="{% url 'chotihatti' %}">
+                  <img id="cart-icon" src="{% static 'chotihatti/img/cart.png' %}" />
+                </a>
+                <p id="cart-total">0</p>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header part end-->
+  {% block home %} {% endblock %} {% block store %} {% endblock %}
+  {% block cart %} {% endblock %} {% block checkout %} {% endblock %}
+  {% block single_product %} {% endblock %}
+
+  <div id="WAButton">
+    <!-- <img src="{% static 'chotihatti/img/whatsapp_icon.png' %}" /> -->
+  </div>
+  <script src="{% static 'chotihatti/js/jquery-1.12.1.min.js' %}"></script>
+  <!-- popper js -->
+  <script src="{% static 'chotihatti/js/popper.min.js' %}"></script>
+  <!-- bootstrap js -->
+  <script src="{% static 'chotihatti/js/bootstrap.min.js' %}"></script>
+  <!-- easing js -->
+  <script src="{% static 'chotihatti/js/jquery.magnific-popup.js' %}"></script>
+  <!-- swiper js -->
+  <script src="{% static 'chotihatti/js/swiper.min.js' %}"></script>
+  <!-- swiper js -->
+  <script src="{% static 'chotihatti/js/mixitup.min.js' %}"></script>
+  <!-- particles js -->
+  <script src="{% static 'chotihatti/js/owl.carousel.min.js' %}"></script>
+  <script src="js/jquery.nice-select.min.js"></script>
+  <!-- slick js -->
+  <script src="{% static 'chotihatti/s/slick.min.js' %}j"></script>
+  <script src="{% static 'chotihatti/js/jquery.counterup.min.js' %}"></script>
+  <script src="{% static 'chotihatti/js/waypoints.min.js' %}"></script>
+  <script src="{% static 'chotihatti/js/contact.js' %}"></script>
+  <script src="{% static 'chotihatti/js/jquery.ajaxchimp.min.js' %}"></script>
+  <script src="{% static 'chotihatti/s/jquery.form.js' %}j"></script>
+  <script src="{% static 'chotihatti/js/jquery.validate.min.js' %}"></script>
+  <script src="{% static 'chotihatti/js/mail-script.js' %}"></script>
+  <!-- custom js -->
+  <script src="{% static 'chotihatti/js/custom.js' %}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript"
+    src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#WAButton").floatingWhatsApp({
+        phone: "+92 312 3155530", //WhatsApp Business phone number
+        headerTitle: "Chat with us on WhatsApp!", //Popup Title
+        popupMessage: "Hello, how can we help you?", //Popup Message
+        showPopup: true, //Enables popup display
+        buttonImage:
+          '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
+        //headerColor: 'crimson', //Custom header color
+        //backgroundColor: 'crimson', //Custom background button color
+        position: "right", //Position: left | right
+      });
+    });
+  </script>
+</body>
+
+</html>

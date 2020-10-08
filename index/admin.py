@@ -7,6 +7,7 @@ from resume.models import SectionEntries
 from resume.models import Languages
 from portfolio.models import Project
 from portfolio.models import Services
+from chotihatti.models import NewArrivals
 
 
 admin.site.register(IndexSlider)
@@ -17,3 +18,4 @@ admin.site.register(SectionEntries)
 admin.site.register(Languages)
 admin.site.register(Project)
 admin.site.register(Services)
+admin.site.register(NewArrivals)
