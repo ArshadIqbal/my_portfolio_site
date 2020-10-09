@@ -22,3 +22,8 @@ def single_product(request):
 def cart(request):
     context = {}
     return render(request, 'chotihatti/cart.html', context)
+
+
+def coming(request):
+    context = {}
+    return render(request, 'chotihatti/coming_soon.html', context)

@@ -7,14 +7,14 @@
 <section class="banner_part">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-7">
+            <div class="col-sm-7">
                 <div class="banner_slider">
                     <div class="single_banner_slider">
                         <div class="banner_text">
-                            <div class="banner_text_iner">
-                                <h5>Winter Sale</h5>
-                                <h1>Winter Fashion Collection 2020</h1>
-                                <a href="{% url 'store' %}" class="btn_1">shop now</a>
+                            <div class="banner_text_iner ">
+                                <h5 class="banner_h">Winter Sale</h5>
+                                <h1 class="banner_h">Winter Fashion Collection 2020</h1>
+                                <a href="{% url 'coming' %}" class="btn_1">shop now</a>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                 <div class="single_feature_post_text">
                     <img src=" {% static 'chotihatti/img/chunri.jpeg' %}" alt="#">
                     <div class="hover_text">
-                        <a href="{% url 'single_product' %}" class="btn_2">Buy chunris</a>
+                        <a href="{% url 'coming' %}" class="btn_2">Buy chunris</a>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                 <div class="single_feature_post_text">
                     <img src="{% static 'chotihatti/img/feature_2.png' %}" alt="#">
                     <div class="hover_text">
-                        <a href="single-product.html" class="btn_2">Buy Handmade Suits </a>
+                        <a href="{% url 'coming' %}" class="btn_2">Buy Handmade Suits </a>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                 <div class="single_feature_post_text">
                     <img src="{% static 'chotihatti/img/jewellery.png' %}" alt="#">
                     <div class="hover_text">
-                        <a href="single-product.html" class="btn_2">Buy Jewellery</a>
+                        <a href="{% url 'coming' %}" class="btn_2">Buy Jewellery</a>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                 <div class="arrival_filter_item filters">
                     <ul>
                         <li class="active controls" data-filter="*">all</li>
-                        <li class="controls" data-toggle=".men">Chunris</li>
+                        <li class="controls" data-toggwle=".men">Chunris</li>
                         <li class="controls" data-toggle=".women">Dresses</li>
                         <li class="controls" data-toggle=".shoes">Jewellery</li>
                     </ul>
@@ -260,81 +260,6 @@
     </div>
 </section>
 <!-- free shipping end -->
-<!--::footer_part start::-->
-<footer id='footer' class="footer_part">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-sm-6 col-lg-2">
-                <div class="single_footer_part">
-                    <h4>Category</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Male</a></li>
-                        <li><a href="#">Female</a></li>
-                        <li><a href="#">Shoes</a></li>
-                        <li><a href="#">Fashion</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-2">
-                <div class="single_footer_part">
-                    <h4>Company</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="">About</a></li>
-                        <li><a href="">News</a></li>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="single_footer_part">
-                    <h4>Address</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="https://goo.gl/maps/e1FZQoBB4a9syaQ16" target="_blank">Faisal Colony Bahawalpur,
-                                Pakistan</a></li>
-                        <li><span>+92 312 3155530</span></li>
-                        <li><span>chotihatti@arshadiqbal.com</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="single_footer_part">
-                    <h4>Newsletter</h4>
-                    <div id="mc_embed_signup">
-                        <form target="_blank"
-                            action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                            method="get" class="subscribe_form relative mail_part">
-                            <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
-                                class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
-                                onblur="this.placeholder = ' Email Address '">
-                            <button type="submit" name="submit" id="newsletter-submit"
-                                class="email_icon newsletter-submit button-contactForm">subscribe</button>
-                            <div class="mt-10 info"></div>
-                        </form>
-                    </div>
-                    <div class="social_icon">
-                        <a href="https://www.facebook.com/chotihatti" target="_blank"><i class="ti-facebook"></i></a>
-                        <a href="#"><i class="ti-twitter-alt"></i></a>
-                        <a href="https://www.instagram.com/chunri_chotihatti/" target="_blank"><i
-                                class="ti-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-                <div class="copyright_text">
-                    <P>
-                        * free shipping within Pakistan, charges apply for worldwide shipping <br>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script> All rights reserved
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    </P>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+
 
 {% endblock %}

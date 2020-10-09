@@ -25,6 +25,9 @@
   <link rel="stylesheet" href="{% static 'chotihatti/css/slick.css' %}" />
   <!-- style CSS -->
   <link rel="stylesheet" href="{% static 'chotihatti/css/style.css' %}" />
+  <!-- ######## Flip Clock for coming soon################# -->
+  <link rel="stylesheet" href="{% static 'chotihatti/css/flip-clock.css' %}" />
+  <!-- ######## Flip Clock for coming soon################# -->
   <link rel="stylesheet"
     href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css" />
 </head>
@@ -67,15 +70,15 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                     <a class="dropdown-item" href="{% url 'chotihatti' %}#testimonial"> Testimonials </a>
-                    <a class="dropdown-item" href="tracking.html">tracking</a>
+                    <!-- <a class="dropdown-item" href="tracking.html">tracking</a>
                     <a class="dropdown-item" href="checkout.html">product checkout</a>
                     <a class="dropdown-item" href="cart.html">shopping cart</a>
                     <a class="dropdown-item" href="confirmation.html">confirmation</a>
-                    <a class="dropdown-item" href="elements.html">elements</a>
+                    <a class="dropdown-item" href="elements.html">elements</a> -->
                   </div>
                 </li>
 
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     blog
@@ -84,7 +87,7 @@
                     <a class="dropdown-item" href="blog.html"> blog</a>
                     <a class="dropdown-item" href="single-blog.html">Single blog</a>
                   </div>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'chotihatti' %}#footer">Contact</a>
@@ -107,10 +110,89 @@
     </div>
   </header>
   <!-- Header part end-->
+  <!-- ################### Footer Part################ -->
+
+  <!--  ##############end Footer Part ##################-->
   {% block home %} {% endblock %} {% block store %} {% endblock %}
   {% block cart %} {% endblock %} {% block checkout %} {% endblock %}
   {% block single_product %} {% endblock %}
+  {% block about %} {% endblock %}
+  <!--::footer_part start::-->
+  <footer id='footer' class="footer_part">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-sm-6 col-lg-2">
+          <div class="single_footer_part">
+            <h4>Category</h4>
+            <ul class="list-unstyled">
 
+              <li><a href="{% url 'chotihatti'%}#category">Chunri</a></li>
+              <li><a href="{% url 'chotihatti'%}#category">Jewellery</a></li>
+              <li><a href="{% url 'chotihatti'%}#category">Dresses</a></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <div class="single_footer_part">
+            <h4>Company</h4>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'coming' %}">About</a></li>
+              <li><a href="{% url 'coming' %}">News</a></li>
+              <li><a href="{% url 'coming' %}">FAQ</a></li>
+              <li><a href="{% url 'chotihatti' %}#footer">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="single_footer_part">
+            <h4>Address</h4>
+            <ul class="list-unstyled">
+              <li><a href="https://goo.gl/maps/e1FZQoBB4a9syaQ16" target="_blank">Faisal Colony Bahawalpur,
+                  Pakistan</a></li>
+              <li><span>+92 312 3155530</span></li>
+              <li><span>chotihatti@arshadiqbal.com</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <div class="single_footer_part">
+            <h4>Newsletter</h4>
+            <div id="mc_embed_signup">
+              <form target="_blank"
+                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                method="get" class="subscribe_form relative mail_part">
+                <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                  class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                  onblur="this.placeholder = ' Email Address '">
+                <button type="submit" name="submit" id="newsletter-submit"
+                  class="email_icon newsletter-submit button-contactForm">subscribe</button>
+                <div class="mt-10 info"></div>
+              </form>
+            </div>
+            <div class="social_icon">
+              <a href="https://www.facebook.com/chotihatti" target="_blank"><i class="ti-facebook"></i></a>
+              <a href="#"><i class="ti-twitter-alt"></i></a>
+              <a href="https://www.instagram.com/chunri_chotihatti/" target="_blank"><i class="ti-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="copyright_text">
+            <P>
+              * free shipping within Pakistan, charges apply for worldwide shipping <br>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> All rights reserved
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </P>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <div id="WAButton">
     <!-- <img src="{% static 'chotihatti/img/whatsapp_icon.png' %}" /> -->
   </div>
@@ -136,6 +218,9 @@
   <script src="{% static 'chotihatti/js/jquery.ajaxchimp.min.js' %}"></script>
   <script src="{% static 'chotihatti/s/jquery.form.js' %}j"></script>
   <script src="{% static 'chotihatti/js/jquery.validate.min.js' %}"></script>
+  <!-- ######## Flip Clock for coming soon################# -->
+  <script src="{% static 'chotihatti/js/flip-clock.js' %}"></script>
+  <!-- ######## Flip Clock for coming soon################# -->
   <script src="{% static 'chotihatti/js/mail-script.js' %}"></script>
   <!-- custom js -->
   <script src="{% static 'chotihatti/js/custom.js' %}"></script>
@@ -152,6 +237,7 @@
         headerTitle: "Chat with us on WhatsApp!", //Popup Title
         popupMessage: "Hello, how can we help you?", //Popup Message
         showPopup: true, //Enables popup display
+        color: ' #2f7dfc',
         buttonImage:
           '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
         //headerColor: 'crimson', //Custom header color
@@ -159,6 +245,37 @@
         position: "right", //Position: left | right
       });
     });
+  </script>
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Nov 30, 2020 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var countdownfunction = setInterval(function () {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "D " + hours + "H "
+        + minutes + "M " + seconds + "S ";
+
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(countdownfunction);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
   </script>
 </body>
 
