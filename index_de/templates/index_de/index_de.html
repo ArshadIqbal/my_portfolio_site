@@ -1,0 +1,476 @@
+{% extends 'base_de.html' %}
+{% load static %}
+{% block index_de %}
+<!-- Start image slider------------------------->
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade " data-ride="carousel" data-interval="4000">
+    <ol class="carousel-indicators">
+        {% for slider in sliders %}
+        {% if slider.id == 1 %}
+        <li data-target="#carouselExampleIndicators" data-slide-to="{{ slider.id }}" class="active"></li>
+        {% else %}
+        <li data-target="#carouselExampleIndicators" data-slide-to="{{ slider.id }}"></li>
+        {% endif %}
+        {% endfor %}
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        {% for slider in sliders %}
+        {% if slider.id == 1%}
+        <div class="carousel-item active" style="background-image: ;">
+            <img class="d-block w-100" src="{{slider.slider_image.url}}" alt="{{slider.title_bold}}">
+            <div class="carousel-caption text-center">
+                <h5>{{slider.greetings}}</h5>
+                <h1>{{slider.title_bold}}</h1>
+                <!-- <a class="btn btn-outline-light btn-lg" href="#myresume">View Resume</a> -->
+                <!-- <a class="btn btn-outline-light btn-lg" href="#portfolio">View Portfolio</a> -->
+            </div>
+        </div>
+        {% else %}
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{{slider.slider_image.url}}" alt="First slide">
+            <div class="carousel-caption text-center">
+                <h5>{{slider.greetings}}</h5>
+                <h1>{{slider.title_bold}}</h1>
+
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        <!-- End of Inner Carousel ------->
+    </div>
+</div>
+
+<!-- ========================================================End of Slider====================================================================== -->
+<!-- =================================================About me SEction========================================================================= -->
+<section id="aboutme" class="offset">
+    <div class="jumbotron  text-center">
+        <div class="section-heading  text-center">
+            <h1>ABOUT</h1>
+            <div class="heading-underline"></div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-2"></div>
+            <div class="col-md-4 col-xs-12 mb-5">
+                <img class="img-fluid" src="{% static  'index\Author_2.jpg' %}" alt="Author">
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3 col-xs-12">
+                <h2 class="mb-5">Hi! Ich bin Arshad Iqbal</h2>
+                <p class="text-justify mr-3 ml-3">
+                    Ich bin ein Softwareentwickler, zertifizierter Projektmanager und Scrum Master. <br>
+                    Ich bin bei der Firma LTW Intralogistics GmbH als vollzeit Softwareentwickler beschäftigt und
+                    nebenbefurlich bin ich Full Stack entwickler, Scrum Master sowie Coordinator für online projekte
+                    Tätig.
+                    <br>
+                    Ich habe langjährige Erfahrung in der Programmierung von Webanwendungen, Datenbanklösungen,
+                    E-Commerce und vieles mehr.
+
+                </p>
+                <a class="btn btn-outline-light btn-lg  mt-5 mb-5" href="{% url 'index_de' %}#contact">mich
+                    Kontatkieren</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================================================RESUME Section======================================================================== -->
+
+<!--Accordion wrapper-->
+<section id="resume" class="offset">
+    <div class="container">
+        <div class="section-heading mt-5 text-center">
+            <h1>My Resume</h1>
+            <div class="heading-underline"></div>
+        </div>
+        <div id="accordion">
+            <div class="row ">
+                <div class="col-md-6">
+                    <div class="card ">
+                        <div class="card-header" id="Education">
+
+                            <a class="image-responvive center-block" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseEducation" aria-expanded="false" aria-controls="collapseEducation">
+                                <img class="card-img-top" src="{% static  'index\images\education-card.jpg' %}" alt="">
+
+                            </a>
+
+                        </div>
+                        <div id="collapseEducation" class="collapse" aria-labelledby="Education"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="table-responsive mx-3">
+                                    <!--Table-->
+                                    <table class="table table-hover ">
+                                        <!--Table head-->
+                                        <thead>
+                                            <tr>
+                                                <th class="th-sm"><a>Von</th>
+                                                <th class="th-sm"><a>bis</a></th>
+                                                <th class="th-lg"><a>titel und abschluss</a></th>
+                                                <th class="th-sm">Universität</th>
+                                                <th class="th-sm">Ort</th>
+                                            </tr>
+                                        </thead>
+                                        {% for entry in entries_edu %}
+                                        <tbody>
+                                            <tr>
+                                                <td>{{ entry.from_year.year}}</td>
+                                                {% if entry.is_current%}
+                                                <td>Present</td>
+                                                {% else %}
+                                                <td>{{ entry.to_year.year}}</td>
+                                                {% endif %}
+                                                <td>{{ entry.title}} - {{ entry.description}} </td>
+                                                <td>
+                                                    <a href="{{entry.institution_url}}" target="_blank">
+                                                        {{entry.institution}}
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    {{ entry.city}} , {{ entry.country}}
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        {% endfor %}
+                                    </table>
+                                    <!--Table-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="card">
+                        <div class="card-header" id="Experience">
+
+                            <a class="image-responvive center-block" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseExperience" aria-expanded="false" aria-controls="collapseExperience">
+                                <img class="card-img-top" src="{% static  'index\images\experience-card.jpg' %}" alt="">
+
+                            </a>
+                        </div>
+                        <div id="collapseExperience" class="collapse" aria-labelledby="Experience"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="table-responsive mx-3">
+                                    <!--Table-->
+                                    <table class="table table-hover mb-0">
+                                        <!--Table head-->
+                                        <thead>
+                                            <tr>
+                                                <th class="th-sm"><a>von</th>
+                                                <th class="th-sm"><a>bis</a></th>
+                                                <th class="th-lg"><a>titel und beschreibung</a></th>
+                                                <th class="th-sm">Unternehmen</th>
+                                                <th class="th-sm">Ort</th>
+                                            </tr>
+                                        </thead>
+                                        {% for entry in entries_exp %}
+                                        <tbody>
+                                            <tr>
+                                                <td>{{ entry.from_year.year}}</td>
+                                                {% if entry.is_current%}
+                                                <td>Present</td>
+                                                {% else %}
+                                                <td>{{ entry.to_year.year}}</td>
+                                                {% endif %}
+                                                <td>{{ entry.title}} - {{ entry.description}} </td>
+                                                <td>
+                                                    <a href="{{entry.company_url}}" target="_blank">
+                                                        {{entry.company}}
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    {{ entry.city}} , {{ entry.country}}
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        {% endfor %}
+                                    </table>
+                                    <!--Table-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-padding">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header" id="Certificates">
+
+                            <a class="image-responvive center-block" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseCertificates" aria-expanded="false" aria-controls="collapseExperience">
+                                <img class="card-img-top" src="{% static  'index\images\certifications.jpg' %}" alt="">
+
+                            </a>
+
+                        </div>
+                        <div id="collapseCertificates" class="collapse" aria-labelledby="Certificates"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="table-responsive mx-3">
+                                    <!--Table-->
+                                    <table class="table table-hover mb-0">
+                                        <!--Table head-->
+                                        <thead>
+                                            <tr>
+                                                <th class="th-sm align-left"><a>Jahr</th>
+                                                <th class="th-lg align-left"><a>titel </a></th>
+                                                <th class="th-sm align-left">institut</th>
+                                                <th class="th-sm align-left">Ort</th>
+                                            </tr>
+                                        </thead>
+                                        {% for entry in entries_cert %}
+                                        <tbody>
+                                            <tr>
+                                                <td class="align-left">{{ entry.from_year.year}}</td>
+                                                <td class="align-left">{{ entry.title}} - {{ entry.description}} </td>
+                                                <td>
+                                                    <a href="{{entry.institution_url}}" target="_blank">
+                                                        {{entry.institution}}
+                                                    </a>
+                                                </td>
+                                                <td class="align-left">
+                                                    {{ entry.city}} , {{ entry.country}}
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        {% endfor %}
+                                    </table>
+                                    <!--Table-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header" id="Languages">
+                            <a type="image-responvive center-block" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseLanguages" aria-expanded="false" aria-controls="collapseExperience">
+                                <img class="card-img-top" src="{% static  'index\images\language-card.jpg' %}" alt="">
+
+                            </a>
+                        </div>
+
+                        <div id="collapseLanguages" class="collapse" aria-labelledby="Languages"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="row no-padding">
+                                    {% for entry in entries_lang %}
+                                    <div class="col-xs-3">
+                                        {{entry.name}}
+                                        <img src="{{entry.lang_flag.url}}" alt="{{entry.name}}">
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="narrow text-center">
+            <div class="col-12">
+                <p class="lead">
+                    mit mir kotaktaufnehmen
+                </p>
+                <a class="btn btn-outline-light btn-lg" href="{% url 'index_de' %}#contact">zur Kontaktformular</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ============================================================================================================================== -->
+
+<!-- ============Portfolio Section ============================= -->
+<section id="portfolio" class="offset mt-5 mb-5">
+    <div class="  jumbotron container mt-5 text-justify">
+        <div class="section-heading mt-5 text-center">
+            <h2>Portfolio</h2>
+            <div class="heading-underline"></div>
+        </div>
+        <div class=" row  justify-content-md-center ">
+            {%for project in projects %}
+            <div class="project col-md-4 mr-5 ml-5  mt-5 mb-5 ">
+                {% if project.url %}
+                <a href="{{project.url}}" target="_blank">
+                    <img src="{{project.image.url}}" alt="{{project.title}}" class="width">
+                </a>
+                {% else %}
+
+                <h3 class="heading text-center ">{{project.title}}</h3>
+                {% endif %}
+                <h3 class="heading">{{project.title}}</h3>
+                {{project.description}}
+                <div>
+                    <a href="{{project.url}}" class="btn btn-outline-light btn-lg" target="_blank">Visit website</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="narrow text-center">
+            <div class="col-12">
+                <p class="lead">
+                    DU willst deine Phantasie schon bald in REALITÄT umgesetzt haben?
+                </p>
+                <a class="btn btn-outline-light btn-lg" href="{% url 'index_de' %}#contact">vereinbare jetzt eine
+                    kostenlose beratungstermin</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================Services Section============================================================== -->
+<section id="services" class="offset">
+    <div class=" container mt-5 mb-5">
+        <div class="section-heading mt-5 text-center">
+            <h2>was kann ich?</h2>
+            <div class="heading-underline"></div>
+        </div>
+        <div class="row ml-3 mr-3">
+            {% for service in services %}
+            <div class=" col-md-5 col-sm-12 col-xs-12 Services-tab  item center-block">
+                <div class="folded-corner service_tab_1">
+                    <div class="text">
+                        <i class="{{service.fa_url}} fa-5x fa-icon-image"></i>
+                        <p class="item-title">
+                        <h3> {{service.title}}</h3>
+                        </p><!-- /.item-title -->
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- ==============contact me Form -->
+
+<!-- ======================================================= -->
+<section id="contact" class="section offset">
+    <div class="jumbotron container ">
+        <!--Section heading-->
+        <div class="section-heading mt-3 text-center">
+            <h2>Kontakt</h2>
+            <div class="heading-underline"></div>
+        </div>
+        {% if form_name %}
+        <div>
+            <h3>
+                Danke für deine Kontakaufnahme {{form_name}} !
+            </h3>
+            <p class="center">
+                Deine nachricht wird schon bald bearbeitet. DU werdest spätestens innerhalb von 48 Stunden von mir
+                kontatiert!
+            </p>
+        </div>
+        {% else %}
+        <div class="row pr-4">
+
+            <!--Grid column-->
+            <div class="col-lg-5 col-xs-12 ml-3 ">
+
+                <!--Form with header-->
+                <form id="contactForm" action="{% url 'contact' %}" method="POST" class='needs-validation'>
+                    {% csrf_token %}
+                    <div class="card">
+
+                        <div class="card-body col-xs-12">
+                            <!--Header-->
+
+                            <!--Body-->
+                            <div class="md-form mb-3">
+
+                                <input type="text" name="form-name" class="form-control " required
+                                    placeholder="DEINE Name">
+                            </div>
+
+                            <div class="md-form mb-3">
+
+                                <input type="email" name="form-email" class="form-control " required
+                                    placeholder="DEINE E-mail Addresse">
+
+                            </div>
+
+                            <div class="md-form mb-3">
+
+                                <input type="text" name="form-Subject" class="form-control " required
+                                    placeholder="Worüber möchtest DU dich unterhalten?">
+
+                            </div>
+
+                            <div class="md-form mb-3">
+
+                                <textarea name="form-text" class="form-control md-textarea " rows="8" required
+                                    placeholder="DEINE Nachricht"></textarea>
+
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-outline-light btn-lg btn-block">Jetzt nachricht
+                                    senden
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </form>
+                <!--Form with header-->
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-6 col-xs-12 ml-3">
+
+                <!--Google map-->
+                <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50570.449889969925!2d16.401644208882647!3d48.23007456277377!
+                        2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0130495925e7%3A0x79feca80d0e4553f!2sMiriam-Makeba-Gasse%2C%201220%20Wien
+                        !5e0!3m2!1sen!2sat!4v1600328769926!5m2!1sen!2sat" width="600" height="450" frameborder="0"
+                        style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe>
+                </div>
+
+                <br>
+                <!--Buttons-->
+                <div class="row text-center pr-4">
+                    <div class="col-md-5">
+                        <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+                        <p>1220, Wien</p>
+                        <p>Österreich</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+                        <p>+ 43(0) 699 1127 8003</p>
+                        <a class="link" href="https://www.linkedin.com/in/arshad-iqbal-/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i> </a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+                        <p>admin@arshadiqbal.com</p>
+                        <a class="link" href="https://twitter.com/home" target="_blank"><i
+                                class="fab fa-twitter-square"></i> </a>
+
+                    </div>
+                </div>
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        {% endif %}
+    </div>
+    <hr class="socket">
+    <span class="copyright-center pl-5">&copy;Arshad Iqbal 2020</span>
+
+</section>
+<!-- ======================================================== -->
+{% endblock %}

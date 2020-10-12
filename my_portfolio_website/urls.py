@@ -24,6 +24,7 @@ from index import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('de/', include('index_de.urls')),
     path('contact/', views.contact, name='contact'),
     path('chotihatti/', include('chotihatti.urls')),
 

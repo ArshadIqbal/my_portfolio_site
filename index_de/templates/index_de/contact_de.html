@@ -1,0 +1,111 @@
+{% extends 'base.html' %} {% load static %} {% block contact_de %}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<section id="contact" class="section offset">
+    <div class="jumbotron container">
+        <!--Section heading-->
+        <div class="section-heading mt-3 text-center">
+            <h2>Thank You!</h2>
+            <div class="heading-underline"></div>
+        </div>
+        {% if form_name %}
+        <div class="text-center">
+            <h3 class="display-5">Thanks for contacting me {{form_name}} !</h3>
+            <br />
+            <br />
+            <p class="center">Your message will be responded within next 48 Hours.</p>
+        </div>
+        <div class="text-center mt-4">
+            <a class="btn btn-outline-light btn-lg mt-5" href="{% url 'index_de' %}">Back to Home</a>
+        </div>
+        {% else %}
+        <div class="row pr-4">
+            <!--Grid column-->
+            <div class="col-lg-5">
+                <!--Form with header-->
+                <form action="{% url 'index' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="card">
+                        <div class="card-body">
+                            <!--Header-->
+
+                            <!--Body-->
+
+                            <div class="md-form mb-3">
+                                <input type="text" name="form-name" class="form-control" placeholder="Your name " />
+                            </div>
+
+                            <div class="md-form mb-3">
+                                <input type="text" name="form-email" class="form-control" placeholder="Your E-mail" />
+                            </div>
+
+                            <div class="md-form mb-3">
+                                <input type="text" name="form-Subject" class="form-control"
+                                    placeholder="What would you like to write about?" />
+                            </div>
+
+                            <div class="md-form mb-3">
+                                <textarea name="form-text" class="form-control md-textarea" rows="8"
+                                    placeholder="Your message here"></textarea>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button class="btn btn-outline-light btn-lg btn-block">
+                                    send message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!--Form with header-->
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-7">
+                <!--Google map-->
+                <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50570.449889969925!2d16.401644208882647!3d48.23007456277377!
+                            2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0130495925e7%3A0x79feca80d0e4553f!2sMiriam-Makeba-Gasse%2C%201220%20Wien
+                            !5e0!3m2!1sen!2sat!4v1600328769926!5m2!1sen!2sat" width="600" height="450" frameborder="0"
+                        style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0">
+                    </iframe>
+                </div>
+
+                <br />
+                <!--Buttons-->
+                <div class="row text-center pr-4">
+                    <div class="col-md-5">
+                        <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
+                        <p>Miriam Makeba Gasse 2/4/3</p>
+                        <p>1220, Vienna</p>
+                        <p>Austria</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
+                        <p>+ 43(0) 699 1127 8003</p>
+                        <a class="link" href="https://www.linkedin.com/in/arshad-iqbal-/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
+                        <p>info@arshadiqbal.com</p>
+                        <a class="link" href="https://twitter.com/home" target="_blank"><i
+                                class="fab fa-twitter-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Grid column-->
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

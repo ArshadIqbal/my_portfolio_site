@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'portfolio',
     'resume',
     'index',
+    'index_de',
     'chotihatti',
 ]
 
