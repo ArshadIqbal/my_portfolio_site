@@ -1,174 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% load static %}
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+{% load static %}
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="{% static 'bootstrap-4.1.3-dist/css/bootstrap.min.css' %}"> -->
-    <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
-    <!-- <link rel="stylesheet" href="{% static '/css/fixedd.css' %}"> -->
-    <!-- java script files -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Arshad Iqbal</title>
-  </head>
-  <body data-spy="scroll" data-target="#navbarResponsive">
-    <!--    Start Home Section ------->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="{% static 'bootstrap-4.1.3-dist/css/bootstrap.min.css' %}"> -->
+  <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
+  <!-- <link rel="stylesheet" href="{% static '/css/fixedd.css' %}"> -->
+  <!-- java script files -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <!--    Navigation  ------->
+  <title>Arshad Iqbal</title>
+</head>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="{% url 'index' %}">
-        <img
-          src="{% static  'index\Author_1.jpg' %}"
-          width="60"
-          height="60"
-          class="rounded-circle"
-          alt=""
-          loading="lazy"
-        />
-        Arshad Iqbal
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarResponsive"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="nav navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}#aboutme">ABOUT ME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}#resume">RESUME</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}#portfolio">PORTFOLIO</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}#services">what i do</a>
-          </li>
-          <!-- <li class="nav-item">
+<body data-spy="scroll" data-target="#navbarResponsive">
+  <!--    Start Home Section ------->
+
+  <!--    Navigation  ------->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="{% url 'index' %}">
+      <img src="{% static  'index\Author_1.jpg' %}" width="60" height="60" class="rounded-circle" alt=""
+        loading="lazy" />
+      Arshad Iqbal
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}#aboutme">ABOUT ME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}#resume">RESUME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}#portfolio">PORTFOLIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}#services">what i do</a>
+        </li>
+        <!-- <li class="nav-item">
             <a class="nav-link" href="#blogs">BLOGS</a>
           </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'index' %}#contact">CONTACT ME</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!--    End Navigation  ------->
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'index' %}#contact">CONTACT ME</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="http://127.0.0.1:8000/" id="navbardrop" data-toggle="dropdown">
+            <img src="https://www.countryflags.io/us/flat/32.png">
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="http://127.0.0.1:8000/de"> <img
+                src="https://www.countryflags.io/de/flat/32.png"> </a>
 
-    {% block index %}{% endblock %} {% block contact %}{% endblock %}
-    <!--    End Home Section ------->
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--    End Navigation  ------->
 
-    <!--    Start Aboutme Section ------->
-    <div id="aboutme"></div>
-    <!--    End Aboutme Section ------->
+  {% block index %}{% endblock %} {% block contact %}{% endblock %}
+  <!--    End Home Section ------->
 
-    <!--    Start My Resume Section ------->
-    <div id="myresume"></div>
-    <!--    End My Resume Section ------->
+  <!--    Start Aboutme Section ------->
+  <div id="aboutme"></div>
+  <!--    End Aboutme Section ------->
 
-    <!--    Start Portfolio Section ------->
-    <div id="portfolio"></div>
-    <!--    End Portfolio Section ------->
+  <!--    Start My Resume Section ------->
+  <div id="myresume"></div>
+  <!--    End My Resume Section ------->
 
-    <!--    Start Services Section ------->
-    <div id="services"></div>
-    <!--    End Services Section ------->
+  <!--    Start Portfolio Section ------->
+  <div id="portfolio"></div>
+  <!--    End Portfolio Section ------->
 
-    <!--    Start Blogs Section ------->
-    <div id="blogs"></div>
-    <!--    End Blogs Section ------->
+  <!--    Start Services Section ------->
+  <div id="services"></div>
+  <!--    End Services Section ------->
 
-    <!--    Start Contact me Section ------->
-    <div id="contact"></div>
-    <!--    End Contact me Section ------->
+  <!--    Start Blogs Section ------->
+  <div id="blogs"></div>
+  <!--    End Blogs Section ------->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      var form = document.querySelector(".needs-validation");
-      form.addEventListener("submit", function (event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add("was-validated");
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function (event) {
-        FormValidation.formValidation(document.getElementById("contactForm"), {
-          fields: {
-            form-email: {
-              validators: {
-                emailAddress: {
-                  message: "The value is not a valid email address",
-                },
-              },
-            },
+  <!--    Start Contact me Section ------->
+  <div id="contact"></div>
+  <!--    End Contact me Section ------->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    var form = document.querySelector(".needs-validation");
+    form.addEventListener("submit", function (event) {
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add("was-validated");
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      FormValidation.formValidation(document.getElementById("contactForm"), {
+        fields: {
+          form- email: {
+        validators: {
+          emailAddress: {
+            message: "The value is not a valid email address",
           },
-          plugins: {
-            trigger: new FormValidation.plugins.Trigger(),
-            tachyons: new FormValidation.plugins.Tachyons(),
-            submitButton: new FormValidation.plugins.SubmitButton(),
-            icon: new FormValidation.plugins.Icon({
-              valid: "fa fa-check",
-              invalid: "fa fa-times",
-              validating: "fa fa-refresh",
-            }),
+        },
+      },
           },
+      plugins: {
+      trigger: new FormValidation.plugins.Trigger(),
+      tachyons: new FormValidation.plugins.Tachyons(),
+      submitButton: new FormValidation.plugins.SubmitButton(),
+      icon: new FormValidation.plugins.Icon({
+        valid: "fa fa-check",
+        invalid: "fa fa-times",
+        validating: "fa fa-refresh",
+      }),
+    },
         });
       });
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>

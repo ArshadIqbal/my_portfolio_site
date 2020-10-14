@@ -7,7 +7,7 @@ from resume.models import SectionEntries
 from resume.models import Languages
 from portfolio.models import Project
 from portfolio.models import Services
-from chotihatti.models import NewArrivals
+from chotihatti.models import Chunris, Jewellery, Dresses, NewArrivals
 
 from index_de.models import IndexSlider_de, Address_de, Navigation_brand_de, ResumeSection_de, SectionEntries_de, Languages_de, Project_de, Services_de
 
@@ -19,7 +19,7 @@ admin.site.register(SectionEntries)
 admin.site.register(Languages)
 admin.site.register(Project)
 admin.site.register(Services)
-admin.site.register(NewArrivals)
+
 
 admin.site.register(IndexSlider_de)
 admin.site.register(Address_de)
@@ -29,3 +29,10 @@ admin.site.register(SectionEntries_de)
 admin.site.register(Languages_de)
 admin.site.register(Project_de)
 admin.site.register(Services_de)
+
+# models for chotihatti
+
+admin.site.register(Chunris)
+admin.site.register(Jewellery)
+admin.site.register(Dresses)
+admin.site.register(NewArrivals)

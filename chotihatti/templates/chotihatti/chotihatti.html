@@ -14,7 +14,7 @@
                             <div class="banner_text_iner ">
                                 <h5 class="banner_h">Winter Sale</h5>
                                 <h1 class="banner_h">Winter Fashion Collection 2020</h1>
-                                <a href="{% url 'coming' %}" class="btn_1">shop now</a>
+                                <a href="{% url 'chotihatti' %}#new_arrival" class="btn_1">shop now</a>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,6 @@
                 <div class="new_arrival_iner filter-container">
                     <!-- ################## new Arrivals form Database ################ -->
                     {% for arrival in arrivals  %}
-
                     <div class="single_arrivel_item col-lg-4">
                         <img src="{{ arrival.image.url}}" alt="{{ arrival.category}}">
                         <div class="hover_text">

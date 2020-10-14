@@ -42,6 +42,18 @@ h5 {
 }
 
 /* ===================== Navbar =============*/
+.dropdown{
+  margin-top: 10px;
+  border: 1px solid;
+}
+.dropdown:hover .dropdown-menu{
+  display: block;
+  
+}
+.dropdown-menu{
+
+}
+
 .navbar {
   text-transform: uppercase;
   font-weight: 700;
