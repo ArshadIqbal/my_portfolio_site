@@ -4,6 +4,4 @@
 *.pyc
 __pycache__/
 local_settings.py
-local_passenger_wsgi.py
 /static/
-.gitignore.save

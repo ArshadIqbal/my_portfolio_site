@@ -5856,6 +5856,9 @@ ul {
   background-color: #55acee;
 }
 
+.font-weight-bold{
+  color: black !important;
+}
 /* line 2158, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
 .card_area .social_icon .li {
   background-color: #0077b5;
