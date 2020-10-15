@@ -5994,8 +5994,16 @@ ul {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  display: block;
 }
 
+.single_arrivel_item img {
+  height: 100%;
+  width: 100%;
+}
+.single_arrivel_item h1, h2, h3, h4, h5, h6{
+  color: white;
+}
 @media (max-width: 991px) {
   /* line 68, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_new_arrival.scss */
   .new_arrival .single_arrivel_item {

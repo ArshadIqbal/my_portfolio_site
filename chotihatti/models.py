@@ -32,7 +32,7 @@ class Chunris(models.Model):
     pieces = models.PositiveIntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(3)])
     image = models.ImageField(
-        upload_to='chotihatti/images/chunris', null=True, blank=True)
+        upload_to='chotihatti/images/', null=True, blank=True)
     date_added = models.DateField(auto_now=True)
 
     def __str__(self):

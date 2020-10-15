@@ -8,7 +8,13 @@ from .models import NewArrivals
 
 def home(request):
     arrivals = NewArrivals.objects.all()
-    context = {'arrivals': arrivals}
+    chunris = Chunris.objects.all().order_by('-date_added')[:6]
+    dresses = Dresses.objects.all().order_by('-date_added')[:5]
+    jewelleries = Jewellery.objects.all().order_by('-date_added')[:5]
+
+    # context dictionary to render all the variables
+    context = {'arrivals': arrivals, 'chunris': chunris,
+               'dresses': dresses, 'jewelleries': jewelleries}
 
     return render(request, 'chotihatti/chotihatti.html',  context)
 

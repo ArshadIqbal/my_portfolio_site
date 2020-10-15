@@ -29,7 +29,7 @@
 <section id='category' class="feature_part pt-4">
     <div class="container-fluid p-lg-0 overflow-hidden">
         <div class="row align-items-center justify-content-between">
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-3 col-sm-6">
                 <div class="single_feature_post_text">
                     <img src=" {% static 'chotihatti/img/chunri.jpeg' %}" alt="#">
                     <div class="hover_text">
@@ -37,7 +37,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_feature_post_text">
+                    <img src="{% static 'chotihatti/img/chunri.jpeg' %}" alt="#">
+                    <div class="hover_text">
+                        <a href="{% url 'coming' %}" class="btn_2">Buy chunri Doobata</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
                 <div class="single_feature_post_text">
                     <img src="{% static 'chotihatti/img/feature_2.png' %}" alt="#">
                     <div class="hover_text">
@@ -45,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-3 col-sm-6">
                 <div class="single_feature_post_text">
                     <img src="{% static 'chotihatti/img/jewellery.png' %}" alt="#">
                     <div class="hover_text">
@@ -53,6 +61,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -84,13 +93,40 @@
             <div class="col-lg-12">
                 <div class="new_arrival_iner filter-container">
                     <!-- ################## new Arrivals form Database ################ -->
-                    {% for arrival in arrivals  %}
-                    <div class="single_arrivel_item col-lg-4">
-                        <img src="{{ arrival.image.url}}" alt="{{ arrival.category}}">
+                    {% for chunri in chunris  %}
+                    <div class="single_arrivel_item col-lg-3">
+                        <img src="{{ chunri.image.url}}" alt="{{ chunri.category}}">
                         <div class="hover_text">
-                            <p>{{ arrival.category}}</p>
+                            <h1>{{ chunri.category}}</h1>
                             <a href="single-product.html">
-                                <h3>{{ arrival.category}}</h3>
+                                <h2>{{ chunri.title}}</h2>
+                            </a>
+                            <h4>{{ chunri.pieces}}. Pieces</h4>
+
+                            <div class="rate_icon">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h5>Rs.{{chunri.price}}</h5>
+
+                            <div class="social_icon">
+                                <a href="#"><i class="ti-heart"></i></a>
+                                <a href="{%  url 'cart' %}"><i class="ti-bag"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                    {% for dress in dresses  %}
+                    <div class="single_arrivel_item col-lg-3">
+                        <img src="{{ dress.image.url}}" alt="{{ dress.category}}">
+                        <div class="hover_text">
+                            <p>{{ dress.category}}</p>
+                            <a href="single-product.html">
+                                <h3>{{ dress.title}}</h3>
                             </a>
 
 
@@ -101,7 +137,34 @@
                                 <a href="#"> <i class="fas fa-star"></i> </a>
                                 <a href="#"> <i class="fas fa-star"></i> </a>
                             </div>
-                            <h5>Rs.{{arrival.price}}</h5>
+                            <h5>Rs.{{dress.price}}</h5>
+
+                            <div class="social_icon">
+                                <a href="#"><i class="ti-heart"></i></a>
+                                <a href="{%  url 'cart' %}"><i class="ti-bag"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                    {% for jewellery in jewelleries  %}
+                    <div class="single_arrivel_item col-lg-3">
+                        <img src="{{ jewellery.image.url}}" alt="{{ jewellery.category}}">
+                        <div class="hover_text">
+                            <p>{{ jewellery.category}}</p>
+                            <a href="single-product.html">
+                                <h3>{{ jewellery.title}}</h3>
+                            </a>
+
+
+                            <div class="rate_icon">
+                                <a href="#"> <i class="fas fa-star"></i> </a>
+                                <a href="#"> <i class="fas fa-star"></i> </a>
+                                <a href="#"> <i class="fas fa-star"></i> </a>
+                                <a href="#"> <i class="fas fa-star"></i> </a>
+                                <a href="#"> <i class="fas fa-star"></i> </a>
+                            </div>
+                            <h5>Rs.{{jewellery.price}}</h5>
 
                             <div class="social_icon">
                                 <a href="#"><i class="ti-heart"></i></a>
