@@ -30,7 +30,7 @@ def index_de(request):
     services = Services_de.objects.all().order_by('title')
     # ==================== End=====================
     return render(request,
-                  'index_de\index_de.html',
+                  'index_de/index_de.html',
                   {
                       'sliders': sliders, 'adresses': adresses, 'sections': sections,
                       'entries_edu': entries_edu, 'entries_exp': entries_exp, 'entries_lang': entries_lang,
