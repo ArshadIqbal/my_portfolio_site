@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2mc*5l&r!hv$=m@uzy6yq(c$t+c=7)ce3xbee&=ns_10l3t901'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'False'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['arshadiqbal.com','www.arshadiqbal.com']
 
 
 # Application definition
@@ -89,8 +89,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {'charset': 'utf8mb4'},
-        'NAME': 'my_portfolio',
-        'USER': 'root',
+        'NAME': 'cnwgsdkz_my_portfolio',
+        'USER': 'cnwgsdkz_root',
         'PASSWORD': 'Cf66AfC9_',
         'HOST': 'localhost',
         'PORT': '3306',
