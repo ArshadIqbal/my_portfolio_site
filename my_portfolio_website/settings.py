@@ -25,7 +25,7 @@ SECRET_KEY = '2mc*5l&r!hv$=m@uzy6yq(c$t+c=7)ce3xbee&=ns_10l3t901'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'False'
 
-ALLOWED_HOSTS = ['arshadiqbal.com','www.arshadiqbal.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -89,8 +89,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'OPTIONS': {'charset': 'utf8mb4'},
-        'NAME': 'cnwgsdkz_my_portfolio',
-        'USER': 'cnwgsdkz_root',
+        'NAME': 'my_portfolio',
+        'USER': 'root',
         'PASSWORD': 'Cf66AfC9_',
         'HOST': 'localhost',
         'PORT': '3306',
