@@ -285,7 +285,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #000;
+  color: orangered;
   font-family: "Roboto Condensed", sans-serif;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -5878,6 +5878,10 @@ ul {
   margin-bottom: 80px;
 }
 
+.arrival_tittle h2 {
+  color: black;
+  text-transform: lowercase;
+}
 @media (max-width: 991px) {
   /* line 2, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_new_arrival.scss */
   .arrival_tittle,
