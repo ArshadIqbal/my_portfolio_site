@@ -19,27 +19,6 @@ def home(request):
     return render(request, 'chotihatti/chotihatti.html',  context)
 
 
-# def new_chunris(request):
-#     chunris = Chunris.objects.all()
-
-#     context = {'chunris': chunris}
-#     return render(request, 'chotihatti/chotihatti.html',  context)
-
-
-# def new_jewellery(request):
-
-#     jewellery = Jewellery.objects.all().order_by('date_created')[:5]
-#     dress = Dresses.objects.all().order_by('date_created')[:5]
-#     context = {'jewellery': jewellery, }
-#     return render(request, 'chotihatti/chotihatti.html',  context)
-
-
-# def new_dress(request):
-#     dress = Dresses.objects.all().order_by('date_created')[:5]
-#     context = {'dress': dress, }
-#     return render(request, 'chotihatti/chotihatti.html',  context)
-
-
 def store(request):
     context = {}
     return render(request, 'chotihatti/store.html', context)
